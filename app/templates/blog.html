@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name = "viewport" content = "width=device - width,initial-scale = 1.0">
+     <link href = "/static/bootstrap/css/bootstrap.min.css" rel = "stylesheet" media ="screen"> 
+    <title>My Blogs</title>
+    <style>
+       
+       
+        .blog .summary {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  <div class="row" style="background-color:#FFFFF0">
+        <div class="col-md-2 col-md-offset-10 ">
+  
+<a class="btn btn-link" href="http://127.0.0.1:8000/list/" role="button"><span class = "glyphicon glyphicon-home" style="font-size: 20px"></span></a>
+<a class="btn btn-link" href="http://127.0.0.1:8000/list/xx/" role="button"><span class = "glyphicon glyphicon-user" style="font-size: 20px"></span></a>
+<a class="btn btn-link" href="http://127.0.0.1:8000/list/gy/" role="button"><span class = "glyphicon glyphicon-refresh" style="font-size: 20px"></span></a></div>
+
+
+
+           
+        
+     </div>
+{% for blog in blogs %}
+ <div class= "row">
+<div class = "col-md-8 col-md-offset-2">
+    <div class="blog">
+        <div class="title">
+            <a href="#"><h2>{{ blog.title }}</h2></a>
+        </div>
+        <div class="info">
+            <span class="author" style="color: #808080">作者：{{ blog.author }}</span>
+           <span class="created" style="color: #808080">创建时间：{{ blog.created|date:"Y-m-d H:i" }}</span>
+        </div>
+        <div class="summary">
+            {{ blog.content|slice:"250" }}
+        </div>
+    </div>
+</div>
+</div>
+</div>
+{% endfor %}
+
+ 
+</body>
+</html>

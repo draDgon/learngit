@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>zhuce</title>
+
+     <meta name = "viewport" content = "width=device - width,initial-scale = 1.0">
+     <link href = "/static/bootstrap/css/bootstrap.min.css" rel = "stylesheet" media ="screen">   
+</head>
+
+    
+<body>
+<div class = "container">
+     <div class="row">
+        <div class="col-md-6 col-md-offset-3 ">
+                  
+              <h2  class="text-center"><mark>欢迎注册</mark></h2>
+ </div></div>                    
+               <form method="POST" action="/zhuce/">
+
+<dic class = "row">
+<div class="col-md-6 col-md-offset-3 ">
+
+                     <h5>Username:</h5>
+                     <input type="text" name = "name" class="form-control"  placeholder="Username">
+                     <h5>Password:</h5>
+                     <input type="text" name = "password1"  class="form-control" placeholder="Password"><h5>Password:</h5>
+                     <input type="text" name = "password2" class="form-control"  placeholder="Please once again"><h5>Email:</h5>
+                     <input type="text" name = "email"  class="form-control"  placeholder="Email"><h5>Telelphone:</h5>
+                     <input type="text" name = "phone" class="form-control"  placeholder="Phone">
+                         <button type="submit" class="btn btn-default">提交</button></div></div>
+                 
+                 {% csrf_token %}
+  
+               </form>
+
+<div class= "row">
+<div class = "col-md-6 col-md-offset-3">
+<h4>{%for error in errors%}
+ {{  error}}
+{% endfor  %}</h4>
+
+</div></div>
+   
+</body>
+
+</html>

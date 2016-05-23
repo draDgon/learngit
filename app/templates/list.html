@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>hi</title>
+
+     <meta name = "viewport" content = "width=device - width,initial-scale = 1.0">
+     <link href = "/static/bootstrap/css/bootstrap.min.css" rel = "stylesheet" media ="screen">   
+</head>
+
+ 
+<body >
+
+<div class = "container">  
+<div class="row" style="background-color:#FFFFF0" >
+   <div class="col-md-1 col-md-offset-8">
+
+     
+       {%load staticfiles%}
+         <img src="{%static "yinhun.png"%}"alt="my image"/></div>
+         <div class="col-md-2 ">
+            <h5>&nbsp;&nbsp;&nbsp;Mr.liu</h5>
+            <h6 >&nbsp;&nbsp;&nbsp;个人签名：我是大傻静</h6></div>
+            
+              <div class="col-md-1">  
+
+              <a href="http://127.0.0.1:8000" class="btn btn-link" role="button">
+                  注销
+               </a>
+                <a href="xx" class="btn btn-link" role="button">
+                  个人信息
+               </a></div>
+           
+         </div>
+     
+     <div class="row"  style="background-color:#F5F5F5">
+        <div class="col-md-6 col-md-offset-3 ">
+           <div class = "text-center">       
+               <h2>{% block header_text %}刘先生与王小姐{% endblock %}</h2>
+ </div>                    
+               
+           
+        </div>
+     </div>
+     <div class = "row"  style="background-image:url(http://127.0.0.1:8000/static/hua.png)">
+   <div class="col-md-2"><a class="btn btn-link" href="gy" role="button"><h5><strong>关于我们</strong></h5></a></div>
+  <div class="col-md-2"><a class="btn btn-link" href="photo" role="button"><h5><strong>相册</strong></h5></a></div>
+  <div class="col-md-2"><a class="btn btn-link"  href="day" role="button"><h5><strong>日志</strong></h5></a></div>
+  <div class="col-md-2"><a class="btn btn-link"  href="blog" role="button"><h5><strong>博客</strong></h5></a></div>
+  <div class="col-md-2"><a class="btn btn-link" href="dt" role="button"><h5><strong>动态</strong></h5></a></div>
+<div class="col-md-2"><a class="btn btn-link" href="gd" role="button"><h5><strong>更多</strong></h5></a></div>
+
+
+           
+        </div>
+     </div>
+</div>
+
+<div class = "row" >
+
+<div class="col-md-1 col-md-offset-1" >
+
+ 
+<h5><strong>&nbsp; &nbsp; 最近：</strong></h5>
+<a class="btn btn-link" href="blog/1" role="button"><h5><strong>pygame基本框架</strong></h5></a>
+<a class="btn btn-link" href="blog/2" role="button"><h5><strong>网络爬虫的艺术</strong></h5></a>
+<a class="btn btn-link" href="blog/3" role="button"><h5><strong>selenium自动化测试</strong></h5></a>
+<a class="btn btn-link" href="blog/4" role="button"><h5><strong>美化网站&nbsp;</strong></h5></a>
+<a class="btn btn-link" href="blog/5" role="button"><h5><strong>注册域名&nbsp;</strong></h5></a>
+<a class="btn btn-link" href="blog/6" role="button"><h5><strong>Django的美妙</strong></h5></a>
+<a class="btn btn-link" href="blog/7" role="button"><h5><strong>如何制作一个简单的个人网站</strong></h5></a></div>
+<div class = "col-md-6 col-md-offset-1 " >
+<div class="panel panel-info ">
+   <div class="panel-heading">
+      <h3 class="panel-title">聊天板</h3>
+   </div>
+
+<table class="table">
+<th>あなたのことが好きです</th>
+{%  for item in items %}
+
+<tr><td>{{ item.text }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.times}}</td></tr>
+{% endfor %}
+</table>
+
+<form method="POST" action="/list/">
+
+
+<input type="text" name = "item_text" class="form-control" placeholder="Text input">
+<input class="btn btn-default" type="submit" value="发送">
+
+                 {% csrf_token %}
+  
+               </form>
+
+</div>
+</div>
+
+
+<div class="col-md-1 " >
+<h5><strong> &nbsp; &nbsp;python：</strong></h5>
+<a class="btn btn-link" href="gd/1" role="button"><h5><strong>pygame贪吃蛇</strong></h5></a>
+<a class="btn btn-link" href="gd/2" role="button"><h5><strong>pygame扫雷</strong></h5></a>
+<a class="btn btn-link" href="gd/3" role="button"><h5><strong>pygame俄罗斯方块</strong></h5></a>
+<a class="btn btn-link" href="gd/4" role="button"><h5><strong>问卷调查脚本</strong></h5></a>
+<a class="btn btn-link" href="gd/5" role="button"><h5><strong>评教脚本</strong></h5></a>
+<a class="btn btn-link" href="gd/6" role="button"><h5><strong>爬妹子网照片</strong></h5></a>
+<a class="btn btn-link" href="gd/7" role="button"><h5><strong>简单的个人网站</strong></h5></a>
+<a class="btn btn-link" href="gd/8" role="button"><h5><strong>微信公众号</strong></h5></a>
+<a class="btn btn-link" href="gd/9" role="button"><h5><strong>QQ机器人</strong></h5></a>
+<a class="btn btn-link" href="gd/10" role="button"><h5><strong>贴吧删帖器</strong></h5></a>
+<a class="btn btn-link" href="gd/11" role="button"><h5><strong>照片处理器</strong></h5></a>
+</div>
+
+
+  
+  
+
+</div>
+
+   
+  
+</body>
+
+</html>

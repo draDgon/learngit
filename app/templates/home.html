@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>king</title>
+
+     <meta name = "viewport" content = "width=device - width,initial-scale = 1.0">
+     <link href = "/static/bootstrap/css/bootstrap.min.css" rel = "stylesheet" media ="screen">   
+</head>
+
+    
+<body>
+<div class = "container">
+<div class = "row">
+<div class="col-md-1  col-md-offset-10">
+<a class="btn btn-link" href="zhuce" role="button">注册</a></div>
+<div class="col-md-1">
+<a class="btn btn-link" href="lianxi" role="button">联系我</a></div></div>
+
+ 
+<div class="row">
+
+
+        <div class="col-md-3  col-md-offset-9">
+          <h3>{% block header_text %}Welcome to my home{%endblock %}
+</div>         
+               <form method="POST" >
+       
+                    <div class="col-md-3  col-md-offset-9"><div class="form-group">
+                     <div class="col-xs-9"><label for="exampleInputUser">Username</label>
+                   <input type="text" name = "user" class="form-control" id="exampleInputUser" placeholder="Username"></div>
+                      </div></div>
+
+                    
+ <div class="col-md-3 col-md-offset-9"><div class="form-group">
+                     <div class="col-xs-9"><label for="exampleInputUser">Password</label>
+                     <input type="password" name = "mima" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                     </div></div></div>
+<div class="col-md-2  col-md-offset-9">
+<button type="submit" class="btn btn-link">&nbsp;登陆</button>
+<a class="btn btn-link" href="mima" role="button">忘记密码？</a></div>
+
+                     
+                 
+                 {% csrf_token %}
+  
+               </form>
+
+
+  </div>
+     </div>
+  
+</body>
+
+</html>
